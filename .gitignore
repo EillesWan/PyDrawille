@@ -1,3 +1,10 @@
+
+# my stuff
+refant/
+test.py
+*.otf
+*.ttf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
