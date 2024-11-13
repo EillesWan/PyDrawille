@@ -92,4 +92,4 @@ braille_image.show()
 
 1.  感谢 [_自由软件基金会_ FSF](https://www.fsf.org) 在促进软件非自由化方面取得的杰出贡献；所谓的自由软件，倘若仅仅建立于开发者的非自由之上，则无谓之以自由。在 _自由软件基金会_ 的自介辞“我们的使命是在全球范围内促进计算机用户的自由。我们捍卫所有软件用户的权利。”中，我相信他们的的确确在其各类协议中试图保护计算机用户之自由，同时也试图剥夺开发者自由开发软件的权利。我相信，**真正的自由，只有建立在全人类的广度之上，才可以称得上是真正的自由**，一部分人的自由不叫自由，那只不过是他们对其他人的奴役。我们需要捍卫开发者的自由，捍卫开发者合理化自己知识产权的权利！
 
-2.  感谢 [**asciimoo**](https://github.com/asciimoo) 在 [**drawille**](https://github.com/asciimoo/drawille) 项目中使用的 [**AGPLv3**](https://github.com/asciimoo/drawille/blob/master/LICENSE) 协议，敦促我们不得不使用全新的逻辑，以完全避免其法律风险。感谢 TA 提供了这么良好的契机，使得我能够有想法去探求这个项目的代码实现。
+<!-- 2.  感谢 [**asciimoo**](https://github.com/asciimoo) 在 [**drawille**](https://github.com/asciimoo/drawille) 项目中使用的 [**AGPLv3**](https://github.com/asciimoo/drawille/blob/master/LICENSE) 协议，敦促我们不得不使用全新的逻辑，以完全避免其法律风险。感谢 TA 提供了这么良好的契机，使得我能够有想法去探求这个项目的代码实现。 -->

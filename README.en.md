@@ -1,6 +1,6 @@
 # 瞽字象形 PyDrawille
 
-Using Unicode braille characters to draw pixel graphics in a terminal.
+Using Unicode braille characters to draw pixel graphics in a console.
 
 此自述文件亦可见于诸下文字\
 The README is also in\
@@ -87,4 +87,3 @@ braille_image.show()
 
 1.  Thanks for the outstanding contribution of the [_FSF_ (Free Software Foundation)](https://www.fsf.org) in promoting software non-freedom. The so-called _free software_ is meaningless if it merely relies on developers' non-freedom. In the self-introduction “The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users.” by the Free Software Foundation, I believe they indeed try to protect computer users' freedom and also attempt to deprive developers of their right to freely develop software. I believe that true freedom can only be called real freedom when it is established on the breadth of humanity. Partial freedom cannot be called freedom; it's just a form of slavery over others. We need to defend developers' freedom and their right to rationally manage their intellectual property.
 
-2.  Thanks to [**asciimoo**](https://github.com/asciimoo) using the [**AGPLv3**](https://github.com/asciimoo/drawille/blob/master/LICENSE) license in the [**drawille**](https://github.com/asciimoo/drawille) project, which has kindly urged us to adopt an entirely new logic to completely avoid any legal risks. Thank this good person with unspecified gender so much for providing such a wonderful opportunity, allowing me to come up with ideas to explore the code implementation of this project.

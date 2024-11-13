@@ -1,22 +1,12 @@
 from os import get_terminal_size
-from typing import Any, Iterable, Optional, Iterator, Sequence, Tuple
+from typing import Iterable, Optional, Iterator, Tuple
 
 import numpy as np
 
 from PIL import Image, ImageFont
 
 from numpy.typing import NDArray
-
-
-# def binarry_add(dist: int, bit: bool):
-#     return (dist << 1) & bit
-
-
-# def binarry_plus(dist: int, *other: int):
-#     for one in other:
-#         dist <<= one.bit_length()
-#         dist &= one
-#     return dist
+from numpy._typing import _ArrayLikeInt_co
 
 
 class CanvasSurface(object):
@@ -298,8 +288,8 @@ class CanvasSurface(object):
 
     def set_pixels(
         self,
-        x_: NDArray[np.integer] | Sequence[int | np.integer] | np.integer[Any],
-        y_: NDArray[np.integer] | Sequence[int | np.integer] | np.integer[Any],
+        x_: _ArrayLikeInt_co,
+        y_: _ArrayLikeInt_co,
         value: bool = True,
     ):
         """
@@ -359,12 +349,11 @@ class CanvasSurface(object):
     def set_canvas(self, value: bool = True):
         """
         设置画布所有像素
-        
+
         `value`: bool
             像素值，真为设立像素存在
         """
         self.data.fill(value)
-
 
     def reverse_pixel(self, x: int, y: int):
         """
@@ -383,7 +372,7 @@ class CanvasSurface(object):
     def set_block(self, x: int, y: int, width: int, height: int, value: bool = True):
         """
         设置一个区域的像素
-        
+
         参数
         ====
         `x`: int
@@ -398,7 +387,6 @@ class CanvasSurface(object):
             像素值，真为设立像素存在
         """
         self.data[x : x + width, y : y + height] = value
-
 
     def reverse_line(self, y: int):
         """
@@ -630,7 +618,7 @@ class CanvasSurface(object):
         self,
         font_: ImageFont.FreeTypeFont,
         backgrand_color: int = 0,
-        foreground_color:int = 255,
+        foreground_color: int = 255,
     ) -> Image.Image:
         """
         将画布生成盲文字符画图片，理论上只能支持黑白二色
@@ -650,27 +638,41 @@ class CanvasSurface(object):
         simple_image = Image.new(
             mode="1",
             size=(
-                int(np.ceil(
-                    font_.getlength(
-                        "⠤",
-                        mode="1",
-                    )*self.surface_width // 2
-                ),),
-                int(np.ceil(self.surface_height // 4 * font_.size),),
-            ),color=backgrand_color,
+                int(
+                    np.ceil(
+                        font_.getlength(
+                            "⠤",
+                            mode="1",
+                        )
+                        * self.surface_width
+                        // 2
+                    ),
+                ),
+                int(
+                    np.ceil(self.surface_height // 4 * font_.size),
+                ),
+            ),
+            color=backgrand_color,
         )
         # to_draw = ImageDraw.Draw(simple_image)
         for index_, line_ in enumerate(self.dump_lines()):
             # to_draw.text((0, round(index_ * font_.size,)), line_, font=font_,fill=255)
             im_mask: Image.Image = font_.getmask(
-                    line_,
-                    mode="L",
-                    ink=foreground_color,
-                )
-            
+                line_,
+                mode="L",
+                ink=foreground_color,
+            )
+
             simple_image.paste(
                 im=im_mask,
-                box=(0, kr:=round(index_ * font_.size,),im_mask.size[0],kr+im_mask.size[1]),
+                box=(
+                    0,
+                    kr := round(
+                        index_ * font_.size,
+                    ),
+                    im_mask.size[0],
+                    kr + im_mask.size[1],
+                ),
             )
         return simple_image
 

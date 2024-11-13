@@ -9,12 +9,12 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at http://mozilla.org/MPL/2.0/.
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.1.1"
 __author__ = {
-    "Eilles",
+    "金羿Eilles",
 }
 
-from .main import *
+from .main import CanvasSurface
 
 __all__ = [
     "CanvasSurface",
@@ -57,4 +57,5 @@ __poem__ = """
 无有秩序
 何来你我身旁
 依偎着的
-缕缕清香？"""
+缕缕清香？
+"""

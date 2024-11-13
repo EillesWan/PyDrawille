@@ -24,11 +24,7 @@ canvas.set_pixels(
 print(canvas.dump())
 
 canvas.dump_image(
-    ImageFont.truetype(
-        font="./DejaVuSansCondensed.ttf",
-        size=32,
-        encoding="utf-8"
-    ),
+    ImageFont.truetype(font="./DejaVuSansCondensed.ttf", size=32, encoding="utf-8"),
     0,
     255,
 ).save(
