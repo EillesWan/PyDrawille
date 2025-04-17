@@ -1,5 +1,6 @@
-import shutil
 import os
+import shutil
+
 from rich.console import Console
 from rich.progress import track
 

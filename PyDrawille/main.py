@@ -1,12 +1,27 @@
+"""
+版权所有 © 2025 金羿ELS
+Copyright (R) 2025 Eilles(EillesWan@outlook.com)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+"""
+
 from os import get_terminal_size
-from typing import Iterable, Optional, Iterator, Tuple
+from typing import Iterable, Iterator, Optional, Tuple
 
 import numpy as np
-
-from PIL import Image, ImageFont
-
+from numpy._typing._array_like import _ArrayLikeInt_co
 from numpy.typing import NDArray
-from numpy._typing import _ArrayLikeInt_co
+from PIL import Image, ImageFont
 
 
 class CanvasSurface(object):

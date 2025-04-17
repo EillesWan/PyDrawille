@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-版权所有 © 2024 金羿ELS
-Copyright (R) 2024 Eilles(EillesWan@outlook.com)
+版权所有 © 2025 金羿ELS
+Copyright (R) 2025 Eilles(EillesWan@outlook.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-__version__ = "0.0.1.1"
+__version__ = "0.0.1.2"
 __author__ = {
     "金羿Eilles",
 }
